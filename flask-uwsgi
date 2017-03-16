@@ -1,14 +1,8 @@
 server {
-    server_name ubuntu.local;
-
-    location / {
-        root /var/www;
-        index index.html;
-    }
-}
-
-server {
-    server_name flask-uwsgi.ubuntu.local;
+    server_name _;
+	listen 8080;
+	listen [::]:8080;
+	charset utf-8;
 
     location / {
         include uwsgi_params;
